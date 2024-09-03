@@ -1,0 +1,10 @@
+SELECT * FROM Artist;
+SELECT FirstName, LastName FROM Customer WHERE City = 'Prague';
+SELECT * FROM Invoice WHERE Total >10 AND InvoiceDate LIKE '2012%';
+SELECT InvoiceDate AS Дата_продажи, BillingAddress AS Адрес_Продажи, BillingCity AS Город_Продажи, Total FROM Invoice WHERE Total = 10.91;
+SELECT LastName, FirstName FROM Employee WHERE HireDate LIKE '2004%' AND City = 'Lethbridge';
+SELECT BillingCity FROM Invoice WHERE InvoiceDate LIKE '2009-08%' AND BillingCountry = 'Canada';
+SELECT LastName, FirstName FROM Employee WHERE HireDate LIKE '____-05-%';
+SELECT LastName, FirstName FROM Employee WHERE DATE_FORMAT(HireDate, '%m') = '05';
+SELECT LastName, FirstName FROM Employee WHERE Title IN ('Sales Support Agent', 'IT Staff');
+SELECT LastName, FirstName FROM Employee WHERE Title = 'Sales Support Agent' OR Title = 'IT Staff';
